@@ -1,235 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Six</title>
+    <title>Resume Six Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        body{
-            background-image: url("./Images/BG2.avif");
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: rgba(243,196,248,255);
-            padding-bottom: 100px;
-        }
-        #logo{
-            box-shadow: 5px 5px 2px rgba(57, 63, 65, 0.571);
-            border-radius: 6px;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            margin: 15px;
-        }
-        .center{
-            margin: top;
-            text-align: center;
-        }
-        h1{
-            font-family: serif;
-            font-size: 50px;
-            color: rgb(81, 37, 142);
-        }
-        h2{
-			font-family: 'Times New Roman', Times, serif;
-            font-size: 60px;
-            padding-top: 40%;
-            margin: 0px;
-            text-align: left;
-        }
-        .resume{
-            border-style: solid;
-            border-width: 0.5px;
-            border-radius: 10px;
-            box-shadow: 10px 10px 5px rgba(152, 193, 207, 0.571);
-            width: 800px;
-            margin: auto;
-            margin-bottom: 40px;
-            background-color: aliceblue; 
-            text-align: center;
-            display: flex;
-            flex-direction: row;
-        }
-        .personalinfo{
-            background-color: rgba(178,158,159,255);
-            width: 43%;
-            padding-top: 50px;
-        }
-        .professionalinfo{
-            width: 57%;
-        }
-        #student{
-            border-style: solid;
-            border-color: white;
-            border-width: 3px;
-            border-radius: 200px;
-            margin-bottom: 70px;
-        }
-        .name{
-            padding-left: 5%;
-            padding-right: 35%;
-            background-color: lightblue;
-            height: 300px;
-            border-top-right-radius: 10px;
-            color: rgb(40,34,31);
-        }
-        .pertitle{
-            font-family:'Arial', sans-serif;
-            font-size: 30px;
-            color: rgba(253,253,253,253);
-        }
-        #profile{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 21px;
-            text-align: left;
-            color: rgba(255,254,253,255);
-            margin-bottom: 70px;
-        }
-        .percol{
-            color: rgba(255,254,253,255);
-            text-align: left;
-            margin-left: 40px;
-            margin-right: 30px;
-        }
-        .phonedetail{
-            font-size: 21px;
-            display: inline;
-        }
-        .maildetail{
-            font-size: 21px;
-            display: inline;
-        }
-        .linkedindetail{
-            font-size: 21px;
-            display: inline;
-        }
-		.githubdetail{
-            font-size: 21px;
-            display: inline;
-        }
-        #phno{
-            padding-left: 10px;
-        }
-        .procol{
-            padding-top: 35px;
-            text-align: left;
-            margin-left: 30px;
-            margin-right: 40px;
-            margin-bottom: 100px;
-        }
-        .protitle{
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(147, 116, 117);
-            font-size: 30px;
-        }
-        .prodata{
-            font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .print{
-            background-color: #4caf50;
-            text-decoration: none;
-            color: white;
-            padding: 7px;
-            border-radius: 50px;
-            box-shadow: 5px 5px 2px rgba(57, 63, 65, 0.571);
-            font-size: x-large;
-            border-style: solid;
-            border-color: #3b973e;
-            padding-right: 100px;
-            padding-left: 100px;
-            cursor: pointer;
-        }
-        .print:hover{
-            font-size: 25px;
-        }
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{ 
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body
+{
+    background: rgb(230, 115, 115);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin:50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    box-shadow: 0 35px 55px rgba(211, 68, 68, 0.1);
+}
+.container .left_Side
+{
+    position: relative;
+    background: #800b0d;
+    padding: 40px;
+}
+.profileText
+{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(179, 46, 46, 0.2);
+}
+.profileText .imgBx
+{
+    position:relative;
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    overflow:hidden;
+
+}
+.profileText .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span
+{
+    font-size: 0.8em;
+    font-style: 300;
+}
+.contactInfo
+{
+    padding-top: 40px ;
+}
+.title
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+
+}
+
+.contactInfo ul
+{
+position: relative;
+}
+.contactInfo ul li
+{
+position: relative;
+list-style: none;
+margin: 10px 0;
+cursor: pointer;
+}
+.contactInfo ul li .icon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #e37b7d;
+}
+.contactInfo ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.education li
+{
+margin-bottom: 15px;
+
+}
+.contactInfo.education h5
+{
+    color: rgb(241, 141, 141);
+    font-weight: 500;
+}
+.contactInfo.education h4
+{
+    color: rgb(252, 248, 248);
+    font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2)
+{
+color: #fff;
+font-weight: 300;
+}
+.contactInfo.language .percent
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #f18384;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.language .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #620305;
+}
+.container .right_Side
+{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about 
+{
+    margin-bottom: 50px;
+
+}
+.about:last-child
+{
+    margin-bottom: 0;
+}
+.title2
+{
+    color:#003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p
+{
+    color: #333;
+}
+.about .box
+{
+    display:flex ;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company
+{
+    min-width: 150px;
+}
+.about .box .year_company h5
+{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color: rgb(148, 8, 8);
+    font-size: 16px;
+}
+.skills .box
+{
+    position: relative;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+align-items: center;
+}
+.skills .box h4
+{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+
+}
+.skills .box .percent
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+background: #c1baba;
+}
+.skills .box .percent div 
+{
+position: absolute;
+top: 0;
+left: 00;
+height: 100%;
+background: rgb(148, 8, 8);
+}
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li 
+{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li .fa 
+{
+    color: #800b0d;
+    font-size: 18px;
+    width: 20px;
+}  
+
     </style>
 </head>
 <body>
-    <a href="Web.html"><img id="logo" src="./Images/logo.PNG" height="60px"></a>
-    <div class="center">
-        <h1>Your Resume</h1>
-        <div class="resume" id="resume">
-            <div class="personalinfo">
-                <img id="student" src="./Images/student.jpg" height="230px">
-                <div class="percol">
-                    <p class="pertitle"><b>PROFILE</b></p>
-                    <p id="profile"></p>
+    <div class="container">
+        <div class="left_Side">
+            <div class="profileText">
+                <div class="imgBx">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQi8N4fKbNARsTwjZZKpBbszKdfrR63QgwfA&usqp=CAU">
                 </div>
-                <div class="percol">
-                    <p class="pertitle"><b>CONTACT ME</b></p>
-                    <p class="phonedetail" id="phone">Ph no:</p>
-                    <p class="phonedetail" id="phno"></p>
-                    <br><br>
-                    <p class="maildetail" id="email">Email ID:</p>
-                    <p class="maildetail" id="emailid"></p>
-                    <br><br>
-                    <p class="linkedindetail" id="linkedin">Linkedin Link:</p>
-                    <p class="linkedindetail" id="linkedinid"></p>
-					<br><br>
-                    <p class="githubdetail" id="github">Github Link:</p>
-                    <p class="githubdetail" id="githubid"></p>
-                </div>
+                <h2>Virat Kohli<br><span>Computer Scientist</span></h2>
             </div>
-            <div class="professionalinfo">
-                <div class="name">
-                    <h2 id="name"></h2>
-                </div>
-                <div class="procol">
-
-                    <p class="protitle"><b>➤ EDUCATION</b></p>
-                    <p class="prodata"  id="education"></p>
-                    <br>
-
-                    <p class="protitle"><b>➤ LANGUAGES</b></p>
-                    <p class="prodata" id="language"></p>
-                    <br>
-
-                    <p class="protitle"><b>➤ SKILLS</b></p>
-                    <p class="prodata" id="skills"></p>
-                    <br>
-
-                    <p class="protitle"><b>➤ EXPERIENCE</b></p>
-                    <p class="prodata" id="experience"></p>
-                    <br>
-                </div>
-            </div>
+            <div class="contactInfo">
+            <h3 class="title">Contact Info</h3>
+            <ul>
+                <li>
+                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span class="text">0900 786 01</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <span class="text">vk@gmail.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                    <span class="text">mywebsite.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                    <span class="text">www.linkedin.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span class="text">Delhi, India</span>
+                </li>
+            </ul>
         </div>
-        <a class="print" href="javascript:void(0)" onclick="printResume()">Download Resume ⭳</a>
+        <div class="contactInfo education">
+            <h3 class="title">EDUCATION</h3>
+            <ul>
+                <li>
+                   <h5>2017 - 2019</h5>
+                   <h4> Matric in Science</h4>
+                   <h4>School Name </h4>
+                </li>
+                <li>
+                    <h5>2019 - 2021</h5>
+                    <h4> Intermediate in Maths</h4>
+                    <h4>College Name</h4>
+                 </li>
+                 <li>
+                    <h5>2021 - Now</h5>
+                    <h4>Undergraduate in Computer Science</h4>
+                    <h4>University Name</h4>
+                 </li>
+            </ul>
+        </div>
+        <div class="contactInfo language">
+            <h3 class="title">LANGUAGES</h3>
+            <ul>
+                <li>
+                    <span class="text">English</span>
+                    <span class="percent"></span>
+                    <div style="width: 90%;"></div>
+                </li>
+                <li>
+                    <span class="text">Hindi</span>
+                    <span class="percent"></span>
+                    <div style="width: 80%;"></div>
+                </li>
+            </ul>
     </div>
-
-    <script>
-        var nameInput = localStorage.getItem("nameInput");
-        var profileInput = localStorage.getItem("profileInput");
-        var emailInput = localStorage.getItem("emailInput");
-        var phoneInput = localStorage.getItem("phoneInput");
-        var linkedinInput = localStorage.getItem("linkedinInput");
-		var githubInput = localStorage.getItem("githubInput");
-        var languageInput = localStorage.getItem("languageInput");
-        var experienceInput = localStorage.getItem("experienceInput");
-        var educationInput = localStorage.getItem("educationInput");
-        var skillsInput = localStorage.getItem("skillsInput");
-
-        document.getElementById("name").innerText = nameInput;
-        document.getElementById("profile").innerText = profileInput;
-        document.getElementById("emailid").innerText = emailInput;
-        document.getElementById("phno").innerText = phoneInput;
-        document.getElementById("linkedinid").innerText = linkedinInput;
-		document.getElementById("githubid").innerText = githubInput;
-        document.getElementById("language").innerText = languageInput;
-        document.getElementById("experience").innerText = experienceInput;
-        document.getElementById("education").innerText = educationInput;
-        document.getElementById("skills").innerText = skillsInput;
-
-        function printResume() {
-            var a = document.body.appendChild(
-               document.createElement("a")
-            );
-           a.download = "WEV 05 Resume builder.html";
-           a.href = "data:text/html," + document.getElementById("resume").innerHTML;
-           a.click();
-        }
-
-    </script>
+    </div>
+  <div class="right_Side">
+  <div class="about">
+    <h2 class="title2">Profile</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem nesciunt,<br> tenetur architecto omnis maxime delectus quae quo reprehenderit quas laudantium.Itaque sequi commodi vero suscipit reiciendis ea aspernatur cum.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem nesciunt,tenetur architecto omnis maxime delectus quae quo reprehenderit quas laudantium. <br>Itaque sequi commodi vero suscipit reiciendis ea aspernatur cum.</p>
+  </div>
+  <div class="about">
+    <h2 class="title2">Experience</h2>
+    <div class="box">
+        <div class="year_company">
+<h5>2019 - 2021</h5>
+<h5>Company Name</h5>
+        </div>
+        <div class="text">
+        <h4>Senior Web Developer</h4>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro exercitationem nesciunt, tenetur architecto omnis </p>
+    </div>
+</div>
+  <div class="box">
+    <div class="year_company">
+<h5>2021 - present</h5>
+<h5>Company Name</h5>
+    </div>
+    <div class="text">
+    <h4>Data Analyist</h4>
+    <p>Lorem ipsum,dolor sit amet consectetur adipisicing elit. Porro exercitationem nesciunt,tenetur architecto omnis </p>
+</div>
+</div>
+</div>
+<div class="about skills">
+    <h2 class="title2">Professional Skills</h2>
+<div class="box">
+    <h4>Html</h4>
+    <div class="percent">
+    <div style="width:95%;"></div>
+</div>
+</div>
+<div class="box">
+    <h4>CSS</h4>
+    <div class="percent">
+    <div style="width: 70%;"></div>
+</div>
+</div>
+<div class="box">
+    <h4>JAVASCRIPT</h4>
+    <div class="percent">
+    <div style="width: 95%;"></div>
+</div>
+</div>
+<div class="box">
+    <h4>PYTHON</h4>
+    <div class="percent">
+    <div style="width:75%;"></div>
+</div>
+</div>
+</div>
+<div class="About interest">
+    <h2 class="title2">Interest</h2>
+    <ul>
+        <li><i class="fa fa-bar-chart" aria-hidden="true"></i>Trading</li>
+        <li><i class="fa fa-laptop" aria-hidden="true"></i>Developing</li>
+        <li><i class="fa fa-gamepad" aria-hidden="true"></i>Gaming</li>
+        <li><i class="fa fa-briefcase" aria-hidden="true"></i>Business</li>
+    </ul>
+</div>
+  </div>
+    </div>
 </body>
 </html>
